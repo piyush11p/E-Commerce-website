@@ -1,0 +1,187 @@
+# E-Commerce-website
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Product Page</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        header .logo {
+            font-size: 1.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .product {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-details {
+            max-width: 500px;
+        }
+
+        .product-details h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .product-details .description {
+            margin: 10px 0;
+        }
+
+        .product-details .price {
+            color: green;
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .cta-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .product {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .product-image, .product-details {
+                width: 100%;
+                text-align: center;
+            }
+
+            .product-details {
+                padding: 20px 0;
+            }
+
+            .cta-button {
+                width: 100%;
+                padding: 15px 0;
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 5px 0;
+            }
+        }
+
+        /* Interactive Elements */
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        .product-image img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">ShopName</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product">
+            <div class="product-image">
+                <img src="product.jpg" alt="Product Name">
+            </div>
+            <div class="product-details">
+                <h1>Product Name</h1>
+                <p class="description">This is a great product that offers many wonderful features.</p>
+                <p class="price">$99.99</p>
+                <button class="cta-button">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ShopName. All rights reserved.</p>
+    </footer>
+</body>
+</html>
